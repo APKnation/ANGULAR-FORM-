@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Import FormsModule for template-driven forms
 import { AppComponent } from './app.component';
+import { TemplateFormComponent } from './template-form/template-form.component'; // Import the component
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [AppComponent]
+    FormsModule,
+    TemplateFormComponent
+],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
